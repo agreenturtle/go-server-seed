@@ -49,15 +49,15 @@ func main() {
     http.HandleFunc("/auth/google/callback", GoogleCallbackHandler)
 
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        http.ServeFile(w, r, "login")
+        http.ServeFile(w, r, "views/login/index.html")
     })
 
     http.HandleFunc("/success/", func(w http.ResponseWriter, r *http.Request) {
-        http.ServeFile(w, r, "success")
+        http.ServeFile(w, r, "views/success/index.html")
     })
 
     http.HandleFunc("/fail/", func(w http.ResponseWriter, r *http.Request) {
-        http.ServeFile(w, r, "fail")
+        http.ServeFile(w, r, "views/fail/index.html")
     })
 
     log.Fatal(http.ListenAndServe(":8000", nil))
