@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <title> Sample Server </title>
+  </head>
+  <body>
+      <p> Successful Login </p>
+      
+      <a href="/login"> back </a>
+  </body>
+</html>
